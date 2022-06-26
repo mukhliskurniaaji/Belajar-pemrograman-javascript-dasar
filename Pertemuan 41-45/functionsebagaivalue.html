@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Fanction sebagai Value</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		function iniFunction(nama) {
+			document.writeln("<p>Hello "+nama+"</p>");
+		}
+
+		let iniVariabel = iniFunction; 
+		//ini berarti fanction dimasukkan ke dalam fariabel. Tidak perlu ada (), krn kalau ada () berarti memanggil function
+
+		// memanggil function :
+		iniFunction("Wahyu");
+		iniVariabel("Prasetyo"); //memanggil function yang ada di variabel
+
+		// bikin function baru lagi:
+		function fanctionDua(argument) {
+			argument("David");
+		}
+
+		fanctionDua(iniFunction); //memanggil iniFunction dimasukkan ke fanctionDua
+		fanctionDua(iniVariabel);
+	</script>
+</body>
+</html>

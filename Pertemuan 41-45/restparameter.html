@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Rest Parameter</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		function jumlah(nama, ...data) {
+			let jumlahdata = 0;
+			for (const item of data){
+				
+				jumlahdata += item;
+			}
+			document.writeln(`<p>Jumlah ${nama} ada ${jumlahdata}</p>`);
+		}
+
+		jumlah("singa", 1,2,1,4);
+		jumlah("Ular", 3,3,4);
+
+		// spreat syntax
+		let arrayburung = [3,5,8,2]
+		jumlah("burung", ...arrayburung);
+		jumlah("kambing", ...[3,4,1]);
+
+	</script>
+</body>
+</html>

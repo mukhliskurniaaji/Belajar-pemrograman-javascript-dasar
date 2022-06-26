@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Closure</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		function luar(value){
+			const nama = "Yuli";
+
+			function dalam(nilai) {
+				console.info(nama);
+				return value + nilai;
+			}
+			return dalam;
+		}
+
+		const memanggilLuar = luar(5);
+		// maka akan mereturn function dalam
+		// function memanggilLuar(nilai) {
+		// 	console.info("Yuli");
+		// 	return value + nilai;
+		// }
+
+		console.info(memanggilLuar(2));
+		console.info(memanggilLuar(8));
+
+	</script>
+</body>
+</html>

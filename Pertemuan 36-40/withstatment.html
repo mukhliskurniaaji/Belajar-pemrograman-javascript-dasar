@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>With Statment</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		const data ={
+			nama : "Mukhlis",
+			umur : 32,
+			alamat : "Bendungan",
+			pekerjaan : "Programmer"
+		};
+		//memanggil value
+		document.writeln("<p>"+data.nama+"</p>");
+		document.writeln("<p>"+data.umur+"</p>");
+		document.writeln("<p>"+data.alamat+"</p>");
+		document.writeln("<p>"+data.pekerjaan+"</p>");
+		document.writeln("<br>");
+
+		//atau bisa tanpa mengetikkan data(nama object) lagi
+		with (data){
+			document.writeln("<p>"+nama+"</p>");
+			document.writeln("<p>"+umur+"</p>");
+			document.writeln("<p>"+alamat+"</p>");
+			document.writeln("<p>"+pekerjaan+"</p>");
+		}
+
+
+	</script>
+</body>
+</html>

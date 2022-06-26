@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Masalah rar</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	// MENGGUNAKAN LET
+	let i = 20; //global scope
+
+	for (let i = 1; i <=5 ; i++) {
+		// local scope
+		console.log("Local "+i);
+	}
+
+	console.log("Global "+i);
+
+	// MENGGUNAKAN VAR
+	var j = 20; //global scope
+
+	for (var j = 1; j <=5 ; j++) {
+		// local scope
+		console.log("Local "+j);
+	}
+
+	console.log("Global "+j); // harusnya i grobal bernilai 20
+
+</script>
+</body>
+</html>

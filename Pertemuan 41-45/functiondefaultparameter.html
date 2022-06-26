@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Function Default Parameter</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		function daftar(nama, jeniskelamin = "Tidak DIketahui") {
+			console.info(nama);
+			console.info(jeniskelamin);
+		}
+
+		// memanggil function
+		daftar(); // parameter dikosongkan
+		daftar("Rahmad");
+		daftar("Rahmad", "Laki-Laki");
+
+	</script>
+
+</body>
+</html>

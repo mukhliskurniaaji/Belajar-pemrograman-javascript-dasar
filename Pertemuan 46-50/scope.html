@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Scope</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// global scope
+		let variabelGokal = "Ini Variabel Global";
+		let angka = 0;
+
+		function tambahAngka() {
+			angka++;
+		}
+
+		function pertama() {
+			// local scope 
+			let variabelLokalPertama = "Ini variabel lokal pertama";
+
+			function firstNasted() {
+				console.info(variabelLokalPertama); //memanggil variabel di atasnya
+			}
+			firstNasted();
+		}
+
+		function kedua() {
+			// local scope
+			let variabelLokalKedua = "Ini variabel lokal kedua";
+		}
+
+		// menjalankan function :
+		tambahAngka();
+		tambahAngka();
+		pertama();
+		kedua();
+
+		// menampikan function :
+		console.info(angka); // memanggil variabel angka yang telah dieksekusi function tambahAngka
+		console.info(variabelLokalPertama); // error
+		console.info(variabelLokalKedua); // error
+	</script>
+</body>
+</html>

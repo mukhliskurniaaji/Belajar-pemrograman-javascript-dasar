@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Destructuring default</title>
+</head>
+<body>
+<script type="text/javascript">
+	// ARRAY :
+	const fullname = ["Mukhlis","Kurnia","Aji"];
+	const [firstname, second, third, fourt = "Waloyo"] = fullname;
+
+	console.info(firstname);
+	console.info(second);
+	console.info(third);
+	console.info(fourt);
+
+	// OBJECT:
+	const orang = {
+		pertama : "Ridwan",
+		kedua : "Hanif"
+	}
+	let {pertama, kedua, ketiga = "Wardani"} = orang
+
+	console.info(pertama);
+	console.info(kedua);
+	console.info(ketiga);
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Anonymus Functions</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//ANONYMUS FANCTION DALAM VARIABEL
+		const variabel = function(nama){  //dideklarasikan tanpa nama
+			document.writeln(`<p>Hello ${nama}</p>`);
+		}
+
+		// memanggil functions, dengan cara memanggil variabel
+		variabel ("Edo");
+		variabel ('Dani');
+
+		//ANONYMUS FANCTION DALAM PARAMETER
+		function givemename(callname){
+			callname("Rahmad"); //berarti callname tsb adalah function
+		}
+
+		givemename(function(name){
+			document.writeln(`<p>Hai ${name}</p>`);
+		});
+	</script>
+</body>
+</html>

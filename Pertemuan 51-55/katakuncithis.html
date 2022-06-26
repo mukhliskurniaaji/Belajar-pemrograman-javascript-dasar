@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kata Kunci This</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	// mendeklarasikan object:
+	const orang = {
+		nama : "Hadi",
+		umur : function (abc) { //anonymus function (tidak ada nama function)
+			console.info (`Umur Pak ${this.nama} adalah ${abc}`); //ketika ingin mengakses nama pada object orang ini, harus pakai this.
+		}
+	};
+
+	orang.umur(30);
+	// console.table(orang);
+
+</script>
+</body>
+</html>

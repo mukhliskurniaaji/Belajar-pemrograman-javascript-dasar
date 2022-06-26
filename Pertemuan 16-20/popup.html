@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Percabangan</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let nilai = prompt("Berapa nilai anda?");
+
+		if (nilai > 80) {
+			let klik = confirm("Klik ok untuk melihat hasilnya");
+			if(klik == true){
+			alert("Selamat, anda lulus");
+		}} else if (nilai > 60) {
+			alert("Maaf, anda remidi");	
+		} else if (0 < nilai <61)  {
+			alert("Maaft, anda gagal");	
+		}
+	</script>
+</body>
+</html>

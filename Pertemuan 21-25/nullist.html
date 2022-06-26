@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Nullist</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let parameter;
+
+		let data = parameter;
+		if (data === undefined || data === null) {
+			data = "Nilai Default";
+		}
+
+		document.writeln(data);
+		document.writeln("<br>");
+		//atau bisa :
+
+		data=parameter ?? "Nilai Default";
+		document.writeln(data);
+
+	</script>
+</body>
+</html>

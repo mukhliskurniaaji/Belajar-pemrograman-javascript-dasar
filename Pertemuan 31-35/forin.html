@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>For in</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		const data ={
+			nama : "Mukhlis",
+			umur : 32,
+			alamat : "Bendungan",
+			pekerjaan : "Programmer"
+		};
+
+		//memanggil semua properti
+		for (const proprty in data) {
+			document.writeln("<p>"+proprty+" : "+data[proprty]+"</p>")
+		}
+
+	</script>
+</body>
+</html>

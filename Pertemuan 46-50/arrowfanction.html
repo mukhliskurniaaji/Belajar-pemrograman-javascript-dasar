@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Arrow Function</title>
+</head>
+<body>
+	<script type="text/javascript">
+		const sayHello = (parameter) => {
+			const say =`Hello ${parameter}`;
+			console.info(say);
+		}
+		sayHello("Slamet");
+
+		//Arrow fanction tanpa block{} apabila functionnya sederhana
+		const hello = (parameter) => console.info(`Hello ${parameter}`);
+		
+		hello ("Darno");
+
+		// () pada parameter bisa dihilangkan ketika hanya ada satu parameter
+		const nama = parameter => console.info(`Hello ${parameter}`);
+		
+		hello ("Darno");
+
+		//Arrow fanction return value
+		const jumlah = (first, second) => {
+			return first+second;
+		}
+		console.info(jumlah(10,23));
+		// Disederhanakan menjadi :
+		const sum = (pertama, kedua) => pertama+kedua;
+		console.info(sum(12,15));
+
+		function giveMeName (callback){
+			callback("Parman");
+		}
+		//Anonymous Fuction
+		// giveMeName(function(name){
+		// 	console.info(`Hello ${name}`);
+		// })
+		giveMeName (name => console.info (`Hello ${name}`)); // Arrow fanction
+	</script>
+</body>
+</html>

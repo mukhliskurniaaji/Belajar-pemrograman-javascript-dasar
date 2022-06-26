@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Destructuring Array</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	const nama = ["Mekar", "Sari", "Dewi"];
+	// menginisiasi:
+	const pertama = nama[0];
+	const kedua = nama[1];
+	const ketiga = nama[2];
+
+	// DIGANTI DENGAN METODE DESTRUCTURING :
+	// const [pertama, kedua, ketiga, keempat] = nama;
+	// menampilkan :
+	console.info(pertama);
+	console.info(kedua);
+	console.info(ketiga);
+
+	const desa = ["Bendungan", "Karangan", "Plumpung", "Mulur"];
+	
+	// DIGANTI DENGAN METODE DESTRUCTURING :
+	const [satu, dua, ...lainya] = desa;  //kalau banyak, bisa juga seperti ini, hasilnya array
+	// menampilkan :
+	console.info(satu);
+	console.info(dua);
+	console.info(lainya);
+
+</script>
+</body>
+</html>

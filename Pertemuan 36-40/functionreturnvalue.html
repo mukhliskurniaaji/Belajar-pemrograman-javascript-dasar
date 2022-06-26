@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Retur Value</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		function getNilai (nilai){
+			if (nilai >80) {
+				return "A";
+			} else if (nilai >70) {
+				return "B";
+			} else if (nilai >60) {
+				return "C";
+			} else if (nilai >50) {
+				return "D";
+			} else {
+				return "E";
+			}
+
+		}
+
+		const memanggilFunction = getNilai (81);
+		document.writeln(`<p>${memanggilFunction}</p>`)
+
+	</script>
+</body>
+</html>

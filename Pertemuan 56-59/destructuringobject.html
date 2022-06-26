@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Destructuring Object</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	const data = {
+		namadepan : "Banyu",
+		namabelakang : "Bening",
+		namalengkap : "Banyu Bening",
+		alamat : {
+			desa : "Begajah",
+			kecamatan : "Sukoharjo",
+		},
+		hobi : "sepak bola"
+	}
+
+	const {namadepan, namabelakang, namalengkap, alamat :{desa, kecamatan}, hobi} = data;
+
+	console.info(namadepan);
+	console.info(namabelakang);
+	console.info(namalengkap);
+	console.info(desa);
+	console.info(kecamatan);
+	console.info(hobi);
+
+</script>
+</body>
+</html>

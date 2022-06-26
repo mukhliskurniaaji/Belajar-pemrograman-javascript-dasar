@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>String Template</title>
+</head>
+<body>
+	<script>
+		const depan = "Mukhlis";
+		const tengah = "Kurnia";
+		const belakang = "Aji";
+
+		const bactick = `dengan bactick : ${depan} ${tengah} ${belakang}`;
+		const petik = "dengan petik : "+depan+" "+tengah+" "+belakang;
+
+		document.writeln(bactick);
+		document.writeln("<br>");
+		document.writeln(petik);
+		document.writeln("<br>");
+		document.writeln("<br>");
+
+		const multiline = `ini adalah baris multiline,
+yang bisa enter
+enter lagi dan lagi 
+menggunakan backtick.`
+
+		document.writeln("<pre>");
+		document.writeln(multiline);
+		document.writeln("</pre>");
+	</script>
+</body>
+</html>

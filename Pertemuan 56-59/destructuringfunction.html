@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Destructuring di Function</title>
+</head>
+<body>
+<script type="text/javascript">
+	// function menampilkanNama(nama) {
+	// 	console.info(nama.pertama);
+	// 	console.info(nama.kedua);
+	// 	console.info(nama.ketiga);
+	// }
+
+	// DENGAN DISTRUCTING MENJADI :
+	function menampilkanNama({pertama,kedua,ketiga}) {
+		console.info(pertama);
+		console.info(kedua);
+		console.info(ketiga);
+	}
+	const nama ={
+		pertama  : "Dani",
+		kedua : "Raka",
+		ketiga : "WIjaya"
+	}
+	menampilkanNama(nama);
+
+	// UNTUK ARRAY :
+	// function sum(array) {
+	// 	return array[0]+array[1];
+	// }
+	// DENGAN DISTRUCTING MENJADI :
+	function sum([arr1,arr2]) {
+		return arr1+arr2;
+	}
+
+	console.info(sum([12,15]));
+
+</script>
+</body>
+</html>

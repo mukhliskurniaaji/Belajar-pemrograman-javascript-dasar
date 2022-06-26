@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Object Method</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	// mendeklarasikan object:
+	// const orang = {
+	// 	nama : "Hadi",
+	// 	umur : function (abc) { //anonymus function (tidak ada nama function)
+	// 		alert (`Umur saya adalah ${abc}`);
+	// 	}
+	// };
+
+	// atau dengan :
+	const orang = {
+		nama : "Hadi"
+	};
+
+	orang.umur = function (abc) { 
+			console.info (`Umur saya adalah ${abc}`);
+		}
+
+	orang.umur(30);
+	// console.table(orang);
+
+</script>
+</body>
+</html>

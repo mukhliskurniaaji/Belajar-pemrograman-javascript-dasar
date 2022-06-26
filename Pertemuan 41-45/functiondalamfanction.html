@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Function dalam Fanction</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		function outer (){
+			function inner (){
+				return console.info(`<p>ini inner</p>`);
+			}
+
+			// memanggil function inner
+			inner();
+			inner()
+;		}
+
+		outer();
+		// memanggil function inner di luar outer
+		inner();
+
+	</script>
+</body>
+</html>

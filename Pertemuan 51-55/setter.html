@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Getter Setter</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	// INGIN MENGEDIT NAMA LENGKAP
+	const person = {
+		namadepan : "Samsul",
+		namabelakang : "Nugroho",
+		get namalengkap () {
+			return `${this.namadepan} ${this.namabelakang}`;
+		},
+		set namalengkap (value){
+			const pisah = value.split(" "); // menjadi array 0 dan 1
+			this.namadepan = pisah[0];
+			this.namabelakang = pisah[1];
+		}
+	}
+
+	person.namalengkap = "Banyu Bening";
+	console.info(person.namalengkap);
+
+	person.namalengkap = "Sri Mar";
+	console.info(person.namalengkap);
+
+	person.namalengkap = "Amir Mur";
+	console.info(person.namalengkap);
+
+
+
+</script>
+</body>
+</html>

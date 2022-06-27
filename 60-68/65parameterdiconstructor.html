@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Prototype</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// CONSTRUCTOR FUNCTION:
+		function Orang(namadepan, namabelakang) { //menambahkan parameter pada constructor
+			this.firstname = namadepan;
+			this.lastname = namabelakang;
+			this.sayHello = function (nama) {
+				 console.log(`Hello ${nama}, nama saya ${this.firstname} ${this.lastname}.`)
+				 } // menambahkan method dalam constructor
+		}
+
+		const eko = new Orang("Rahmad" , "Darmaji");
+		eko.sayHello ("Mukhlis");
+
+		const rudi = new Orang("Ratna", "Widi");
+		eko.sayHello ("Aji");
+
+		console.log(eko);
+		console.log(rudi);
+	</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Property di Constructor FUnction</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// CONSTRUCTOR FUNCTION:
+		function Orang() {
+			this.firstname = "";
+			this.lastname = "";
+			this.sayHello = function (nama) {
+				 console.log(`Hello ${nama}, nama saya ${this.firstname} ${this.lastname}.`)
+				 } // menambahkan method dalam constructor
+		}
+
+		const eko = new Orang();
+		eko.firstname = "Eko";
+		eko.lastname = "Setiawan";
+		eko.sayHello ("Mukhlis");
+
+		const rudi = new Orang();
+		rudi.firstname = "Rudi";
+		rudi.lastname = "Efendi";
+		eko.sayHello ("Aji");
+
+		console.log(eko);
+		console.log(rudi);
+	</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Method di Class</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		// Method di dalam instance (TIDAK DIREKOMENDASIKAN):
+		class Mobil {
+			constructor(nama) {
+				this.nama = nama;
+				this.jalan = function (berjalan) {
+					console.info("Mobil "+this.nama+" berjalan " +berjalan)
+				}
+			}
+		}
+
+		const toyota = new Mobil ("Toyota");
+		console.info(toyota);
+		console.info(toyota.nama);
+		console.info(toyota.jalan("maju"));
+
+		// Method di prototype (DIREKOMENDASIKAN):
+		class Motor {
+			constructor(nama) {
+				this.nama = nama;
+			}
+			caraBerjalan(berjalan){
+				console.info("Motor "+this.nama+" berjalan " +berjalan)
+			}
+		}
+
+		const supra = new Motor ("Supra");
+		console.info(supra);
+		console.info(supra.nama);
+		console.info(supra.caraBerjalan("maju"));
+
+	</script>
+</body>
+</html>

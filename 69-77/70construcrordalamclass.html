@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Constructor dalam CLass</title>
+</head>
+<body>
+<script type="text/javascript">
+
+	//menambahkan constructor
+	class Orang {
+		constructor(nama){ 
+			//isi
+			console.info("Hello "+nama);
+		}
+	}
+
+	// MENAMBAHKAN PROPERTY
+	class OrangOrang {
+		constructor(banyak){ 
+			this.name = banyak;
+		}
+	}
+
+	// mendeklarasikan object
+	const orang = new Orang ("Mukhlis");
+	console.info(orang);
+
+	const orangbanyak = new OrangOrang("Mukhlis Kurnia");
+	console.info(orangbanyak);
+	console.info(orangbanyak.name);
+</script>
+</body>
+</html>

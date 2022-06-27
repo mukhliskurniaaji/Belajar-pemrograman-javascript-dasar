@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Getter dan Setter</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		class Mobil {
+			constructor (merk, jenis){
+				this.merk = merk;
+				this.jenis = jenis;
+			}
+
+			get mobil(){
+				return `${this.merk} ${this.jenis}`
+			}
+
+			set mobil(value){
+				const merkjenis = value.split(" ");
+				this.merk = merkjenis[0];
+				this.jenis = merkjenis[1];
+			}
+		}
+
+		const honda = new Mobil("hrv", "suv");
+		console.info(honda);
+		console.info(honda.mobil);
+
+		honda.mobil = "civic sedan";
+		console.info(honda);
+
+	</script>
+</body>
+</html>

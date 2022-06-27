@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Class Inheritance</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	class Motor {
+		constructor (jenis){
+			this.jenis = jenis;
+		}
+
+		caraGas (gas) {
+			console.info(`${this.jenis} berjalan dengan ${gas} gasnya.`);
+		}
+	}
+
+	class Mobil extends Motor{
+		constructor (jenis, warna){
+			super(jenis); // memanggil this.jenis = jenis; punya parentnya
+			this.warna = warna;
+		}
+
+		caraGas (gas) {
+			console.info(`${this.jenis} berwarna ${this.warna} berjalan dengan ${gas} gasnya.`);
+		}
+	}
+
+	const motor = new Motor("Motor");
+	motor.caraGas("diputar");
+
+	const mobil = new Mobil("Mobil", "hitam");
+	mobil.caraGas("Mobil", "diinjak");
+
+</script>
+</body>
+</html>

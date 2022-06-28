@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Membuat Class Error</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	class ValidationError extends Error { //Mengacu pada class Error yg sudah ada
+		constructor(message, field){
+			super(message); //memanggil prperti message dari class Error
+			this.field = field;
+		}
+	}
+
+	class Penjumlahan {
+		static sum (...angkas){
+
+			if (angkas.length===0) {
+				// const err = new Error ("Parameter harus diisi!");
+				// throw err;
+				throw new ValidationError("Parameter harus diisi!")
+			}
+
+			let total = 0;
+			for(const angka of angkas) {
+				total += angka;
+			}
+			return total;
+		}
+	}
+
+	try{
+		console.info(Penjumlahan.sum());
+		console.info("Tidak terjadi error.");
+	} catch (error) {
+		if (error instanceof ValidationError) {
+			console.info(`Terjadii error di field ${error.field} dengan error ${error.message}`)
+		} else {
+			console.info(`Terjadii error : ${error.message}`)
+		}
+	}
+
+</script>
+</body>
+</html>

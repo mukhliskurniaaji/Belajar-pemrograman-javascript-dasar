@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Private Method</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	class Mobil {
+
+		berjalan(){
+			this.#digas();
+		}
+
+		#digas(){
+			console.info(`Mobil HRV berjalan dengan cara digas.`);
+		}
+	}
+
+	const mobil = new Mobil;
+	mobil.berjalan();
+
+	// coba langsung mengakses ke function digas:
+	mobil.#digas();
+
+</script>
+</body>
+</html>

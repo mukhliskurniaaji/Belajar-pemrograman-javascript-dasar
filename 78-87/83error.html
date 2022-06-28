@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TROW ERROR</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	class Penjumlahan {
+		sum (...angkas){
+
+			if (angkas.length===0) {
+				const err = new Error ("Parameter harus diisi!");
+				throw err;
+			}
+
+			let total = 0;
+			for(const angka of angkas) {
+				total += angka;
+			}
+			return total;
+		}
+	}
+
+	const jumlah = new Penjumlahan;
+	console.info(jumlah);
+	console.info(jumlah.sum ()); // tidak diidi atau dikosongkan, maka akan error
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Instance of</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	class Mobil{
+
+	}
+
+	class Motor extends Mobil{
+
+	}
+
+	const mobil = new Mobil;
+	const motor = new Motor;
+
+	console.info(mobil instanceof Mobil); // benar
+	console.info(motor instanceof Mobil); // benar, karena motor warisan dari mobil
+	console.info(motor instanceof Motor); // benar
+	console.info(mobil instanceof Motor); // salah
+
+</script>
+
+</body>
+</html>

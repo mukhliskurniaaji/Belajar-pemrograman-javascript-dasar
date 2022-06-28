@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Static FIeld</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	// class dengan field biasa :
+	class Mobil {
+		merek = "HRV";
+		pabrikan ="Honda";
+	}
+
+	// membuat object dari class Mobil :
+	const mobil = new Mobil;
+	console.info(mobil);
+	console.info(mobil.merek);
+
+
+	// class dengan STATIC field :
+	class Motor {
+		static merek = "Jupiter";
+		static pabrikan ="Yamaha";
+	}
+
+	// membuat object dari class Mobil :
+	const motor = new Motor;
+	console.info(motor);
+	console.info(motor.merek); // undefined
+
+	// dengan STATIC,memanggilnya dengan cara langsung ke classnya :
+	Motor.merek="Mio"
+	console.info(Motor);
+	console.info(Motor.merek);
+
+
+</script>
+</body>
+</html>

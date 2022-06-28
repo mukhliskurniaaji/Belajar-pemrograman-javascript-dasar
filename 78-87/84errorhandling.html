@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Error Handling</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	class Penjumlahan {
+		static sum (...angkas){
+
+			if (angkas.length===0) {
+				// const err = new Error ("Parameter harus diisi!");
+				// throw err;
+				throw new ValidationError("Parameter harus diisi!")
+			}
+
+			let total = 0;
+			for(const angka of angkas) {
+				total += angka;
+			}
+			return total;
+		}
+	}
+	
+	try{
+		console.info(Penjumlahan.sum()); // ketika kosong maka akan error
+		console.info("Kalau atas error, pesan ini tidak akan tampil"); 
+		console.info("Kalau atas TIDAK error, pesan ini akan tampil"); 
+	}catch {
+		console.info("Kalau di try terjadi error, pesan ini akan tampil"); 
+		console.info("Kalau di try TIDAK error, pesan ini TIDAK akan tampil"); 
+	} finally { //Akan selalu ditampilkan baik terjadi error maupun tidak
+		console.info("Ini block finally yg akan terus tertampil.")
+	}
+
+	//Apapun yang terjadi di atas, di bawahnya akan tetap berjalan
+	class Mobil {
+		avanza (jenis, merk){
+			this.jenis = jenis;
+			this.merk = merk;
+			console.info(`Ini mobil ${this.jenis} avanza `)
+		}
+	}
+
+	const mobil = new Mobil;
+	mobil.avanza("MPV" , "Toyota");
+	
+</script>
+
+</body>
+</html>

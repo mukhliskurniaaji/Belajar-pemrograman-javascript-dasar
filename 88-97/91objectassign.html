@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Object Assign</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	const target = {
+		firstname : "Wahyu",
+		secondname : "Haryadi"
+	}
+
+	const sumber = {
+		secondname : "Dudung",
+		lastname : "Marjayanto"
+	}
+
+	Object.assign(target, sumber);
+
+	console.log(target);
+
+	// hasilnya :
+
+	// target = {
+	// 	firstname: "Wahyu"
+	// 	lastname: "Marjayanto"
+	// 	secondname: "Dudung" // apabila ada properties yang sama (secondname) maka diganti milik source
+	// }
+	console.log(sumber);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Object Freeze dan Seal</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	const person = {
+		firstname : "Wahyu",
+		lastname : "Haryadi"
+	}
+
+	Object.freeze(person);
+
+	person.firstname = "Sugiman" // Coba diubah setelah difreeze
+	console.log(person);
+	delete person.firstname;  // Coba dihapus setelah difreeze
+	console.log(person);
+
+
+	const orang = {
+		firstname : "Dudung",
+		lastname : "Marjayanto"
+	}
+
+	Object.seal(orang);
+
+	orang.firstname = "Sugiman" // Coba diubah setelah difreeze
+	console.log(orang);
+	delete orang.firstname;  // Coba dihapus setelah difreeze
+	console.log(orang);
+
+</script>
+</body>
+</html>

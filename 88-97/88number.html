@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Number</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	const input = "12345";
+	const number = Number(input); // Konversi string ke number
+
+	console.info(number);
+	console.info(typeof input);
+	console.info(typeof number);
+
+	console.info(Number("kata")); //bukan number
+
+	// NUMBER STATIC PROPERTIES :
+ 	console.info(Number.MIN_VALUE);
+ 	console.info(Number.MAX_VALUE);
+ 	console.info(Number.MIN_SAFE_INTEGER);
+ 	console.info(Number.MAX_SAFE_INTEGER);
+
+ 	const data = Number("1234556"); //menjadi integer
+ 	console.info(Number.isInteger(data));
+ 	console.info(Number.isNaN(data));
+
+ 	const value = Number("23145");
+ 	console.info(value.toString(2));
+ 	console.info(value.toLocaleString("id-ID"));
+
+</script>
+</body>
+</html>

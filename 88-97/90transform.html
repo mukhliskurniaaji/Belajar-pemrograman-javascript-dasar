@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Array Search</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	const names = "Mukhlis Kurnia Aji".split(" ");
+	//map berarti akan menguppercase setiap data :
+	const maps = names.map(value => value.toUpperCase()); 
+	console.info(maps);
+
+	// REDUCE
+	const nama = ["Mukhlis", "Kurnia", "Aji", "Sasono", "Honggo"]
+	const nameReduce = nama.reduce((awal, selanjutnya) => awal+" "+selanjutnya);
+	//code diatas berarti mengambil array paling awal ditambah  spasi array belakangnya, disimpan menjadi nilai awal, kemudian spasi belakangnya  lagi.
+
+	console.info(nameReduce);
+
+	// REDUCE right
+	const jeneng = ["Mukhlis", "Kurnia", "Aji", "Sasono", "Honggo"]
+	const nameReduceRight = jeneng.reduceRight((belakang, depanya) => belakang+" "+depanya);
+	//code diatas berarti mengambil array paling belakang ditambah  spasi array depannya, disimpan menjadi nilai belakang, kemudian spasi depannya lagi.
+
+	console.info(nameReduceRight);
+
+</script>
+</body>
+</html>

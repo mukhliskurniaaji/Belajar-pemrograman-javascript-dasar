@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Array</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	// Loop For of
+	const iterable = [10, 20, 30];
+
+	for (let value of iterable) {
+	  value += 1;
+	  console.log(value);
+	}
+
+	// forEach()
+	const array = ["Mukhlis", "Kurnia", "Aji"];
+	let nomor = 0;
+
+	array.forEach(function (index, value) {
+		nomor ++;
+		console.info(`${nomor}. ${index} : ${value} `)
+	})
+
+	// forEach() diringkas menjadi :
+	array.forEach( (index, value) => console.info(`${index} : ${value}`))
+	
+	array.forEach(  value => console.info(`${value}`))
+
+</script>
+</body>
+</html>

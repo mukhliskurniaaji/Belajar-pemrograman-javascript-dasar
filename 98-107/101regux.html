@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Reguler Expression</title>
+</head>
+<body>
+<script type="text/javascript">
+
+	// Cara Membuat Reguler Expression :
+	const regex1 = /[Banyu]/;
+	const regex2 = new RegExp("[Banyu]");
+	const regex3 = new RegExp(/[Banyu]/);
+
+	//Contoh kasus :
+	const name = "Banyu Bening Alfarizi Baihaki";
+	const regex = /Bening/;
+
+	let result = regex.exec(name); //Kembalian dalam bentuk Array
+	console.info(result);
+
+	let test = regex.test(name);
+	console.info(test);
+
+</script>
+</body>
+</html>

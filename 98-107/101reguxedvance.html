@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Reguler Expression</title>
+</head>
+<body>
+<script type="text/javascript">
+
+	// Saya ingin mencari nama-nama dengan awalan "ek"
+	// i = incase sensitive
+	// g = global (HARUS)
+	// m = multiline
+
+	const regex = /ek[aioeu]/igm; 
+	const name = "eko edo\n Eku eki Eko eka\n Eke"
+
+	let result ;
+	while ((result = regex.exec(name)) !== null) {
+		console.info(result);
+	}
+
+</script>
+</body>
+</html>

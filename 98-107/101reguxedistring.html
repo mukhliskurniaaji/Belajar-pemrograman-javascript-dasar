@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Reguler Expression</title>
+</head>
+<body>
+<script type="text/javascript">
+
+	// i = incase sensitive
+	// g = global (HARUS)
+	// m = multiline
+
+	const regex = /ek[aioeu]/igm; 
+	const name = "Eno eko Oni edo Eku eki Eko eka Eke"
+
+	console.info(name.match(/ek[aioeu]/ig)); // ["eko", "eku", "eki", "Eko", "eka", "Eke"]
+	console.info(name.search(/ek[aioeu]/ig)); //4
+	// Replace :
+	console.info(name.replace(/ek[aioeu]/ig, "Banyu"));
+	console.info(name.replaceAll(/ek[aioeu]/ig, "Bening"));
+	console.info(name.split(/e/ig));
+
+	// let result ;
+	// while ((result = regex.exec(name)) !== null) {
+	// 	console.info(result);
+	// }
+
+</script>
+</body>
+</html>

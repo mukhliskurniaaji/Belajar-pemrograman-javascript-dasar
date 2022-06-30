@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Proxy</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		const person = {};
+
+		Reflect.set(person, "firstname", "Sardi");
+		Reflect.set(person, "lastname", "Cobi");
+
+		console.info(person);
+
+		// Memanggil:
+		console.info(Reflect.get(person, "firstname")); // true
+		console.info(Reflect.get(person, "lastname"));
+
+		// Mengecek:
+		console.info(Reflect.has(person, "firstname")); // true
+		console.info(Reflect.has(person, "midlename")); // false
+
+	</script>
+</body>
+</html>

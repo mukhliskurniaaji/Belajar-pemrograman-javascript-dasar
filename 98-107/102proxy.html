@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Proxy</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		const target = {
+			midlename : "Kurnia"
+		}
+
+		const handler = {
+			get: function (target, property) {
+				console.info(`Mengakses property : ${property}`)
+				return target[property];
+			},
+			set: function (target, property, value) {
+				console.info(`Mengganti/mengeset ${property}->${value}`)
+				if (value == null) {
+					return target[property] = "";
+				} else {
+					return target[property] = value;
+
+				}
+			}
+		}
+
+		const proxy = new Proxy(target, handler);
+		proxy.firtname = "Mukhlis";
+		proxy.lastname = "Aji";
+
+		console.info(proxy.firtname); // akan menge-set firstname Mukhlis, kemudian get Mukhlis untuk ditampilkan
+		console.info(proxy.midlename);
+		console.info(proxy.lastname)
+	</script>
+</body>
+</html>

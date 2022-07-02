@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aggregate Module</title>
+</head>
+<body>
+    <script type="module">
+        import {Person, sayHello, sayGoodBay, sum} from "./folder/aggregatemodule.js"
+    
+        const orang = new Person("Waloyo");
+        orang.sayHello("Ridwan");
+
+        sayHello("Mukhlis");
+        sayGoodBay("Kurnia");
+
+        const jumlah = sum(12, 24);
+        console.info(jumlah);
+    </script>
+</body>
+</html>

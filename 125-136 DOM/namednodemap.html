@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Named Node Map</title>
+</head>
+<body>
+    <img id="logo" src="https://static.autofun.co.id/pc/id/images/79054afce19473d51c7d.svg" alt="lo go">;
+
+    <script>
+        const logo = document.getElementById("logo");
+        const attrs = logo.attributes; // menangkap semua atribut
+
+        for (const atribut of attrs) {
+            console.info(`${atribut.name}->${atribut.value}`);
+        }
+    </script>
+</body>
+</html>

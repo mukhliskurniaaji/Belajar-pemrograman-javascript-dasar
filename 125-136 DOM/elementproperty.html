@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Property</title>
+</head>
+<body>
+    <div id="contentid" class="contenclass">
+        <h1 id="titleid" class="titleclass">Ini adalah Judul</h1>
+        <p id="deskripsiid" class="decsropsiclass">Selamat datang, semoga bahagia.</p>
+    </div>
+
+    <script>
+        const content = document.getElementById("contentid");
+
+        console.info(content);
+        console.info(content.id); // element property
+        console.info(content.className); // element property
+        console.info(content.tagName); // element property
+
+        const title = document.getElementById("titleid");
+        const deskripsi = document.getElementById("deskripsiid");
+
+        title.remove(); // method element, menghapus title
+        console.info(title);
+                
+    </script>
+</body>
+</html>

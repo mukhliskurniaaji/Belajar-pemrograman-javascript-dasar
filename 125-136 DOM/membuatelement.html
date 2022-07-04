@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element</title>
+</head>
+<body>
+    <div id="contentid" class="contentclass">
+
+    </div>
+
+    <script>
+        const content = document.getElementById("contentid");
+
+        const titleq = document.createElement("h3");
+        titleq.textContent = "Ini Adalah Judul h3";
+        content.appendChild(titleq); // Berarti dimasukkan di content
+        console.info(titleq);
+
+        const title = document.createElement("h1");
+        title.textContent = "Ini Adalah Judul";
+        content.appendChild(title); // Berarti dimasukkan di content
+        console.info(title);
+
+        const deskripsi = document.createElement("p");
+        deskripsi.textContent = "Ini Adalah deskripsi";
+        content.appendChild(deskripsi); // Berarti dimasukkan di content
+        console.info(deskripsi);
+
+    </script>
+</body>
+</html>

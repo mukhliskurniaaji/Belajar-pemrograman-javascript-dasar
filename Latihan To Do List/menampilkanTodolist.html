@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="centered">
+
+    <h1>Input Your To Do :</h1>
+    
+    <form name="todoForm">
+        <table>
+            <tbody>
+                <tr>
+                    <td><label for="todo">To Do</label></td>
+                    <td><input type="text" id="todo" name="todo"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Add"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+    <h1>To Do List :</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Filter : </th>
+                <th><input type="search" name="search" id="search"></th>
+            </tr>
+        </thead>
+        <tbody id="todoListBody">
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        // membuat array todolist ;
+        const todoLists = [
+            "Belajar Java",
+            "Belajar OOP"
+        ];
+
+        // Menghapus clear data lama :
+        function clearTodoList() {
+            const todoListBody = document.getElementById('todoListBody');
+            while(todoListBody.firstChild){
+                todoListBody.removeChild(todoListBody.firstChild);
+            }
+        }
+
+        // Menampilkan Inputan ToDoList :
+        function displayTodoList() {
+            clearTodoList();
+
+            let todo ="";
+            for (let i = 0; i < todoLists.length; i++) {
+                todo = todoLists[i];
+
+                const tr = document.createElement('tr');
+
+                const tdButton = document.createElement('td');
+                tr.appendChild(tdButton);
+                const buttonDone = document.createElement('input');
+                buttonDone.type = "button";
+                buttonDone.value = "Done"
+                tdButton.appendChild(buttonDone);
+
+                const tdText = document.createElement('td');
+                tdText.textContent = todo;
+                tr.appendChild(tdText);
+
+                const todoListBody = document.getElementById('todoListBody');
+                todoListBody.appendChild(tr);
+            }
+        }
+
+        // menangkap inputan dari form: 
+        document.forms['todoForm'].onsubmit = function (params) {
+            event.preventDefault(); //Agar tidak disubmit
+
+            const todo = document.forms['todoForm']['todo'].value;
+            todoLists.push(todo) //menambahkan ke array todoList
+            
+            document.forms['todoForm'].reset();
+
+            displayTodoList();
+        };
+
+        displayTodoList();
+    </script>
+
+</body>
+</html>

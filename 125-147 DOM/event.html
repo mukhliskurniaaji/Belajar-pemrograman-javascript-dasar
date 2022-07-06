@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <h2 id="judul">Click Yellow Box</h2>
+    <div id="canvas" style="width: 500px; height: 250px; background-color: yellow">
+    
+    </div>;
+
+    <script>
+        const canvas = document.getElementById("canvas");
+        const judul = document.getElementById("judul");
+        // Menentukan koordinat yang diclick :
+        canvas.onclick = function(event){
+            judul.textContent = `You Click at (${event.x}) (${event.y})`;
+            console.info (event);
+        }
+    </script>
+</body>
+</html>

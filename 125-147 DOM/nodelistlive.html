@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeList Live</title>
+</head>
+<body>
+    <ul id="menu">
+        <li id="pertama">Pertama</li>
+        <li id="kedua">Kedua</li>
+        <li id="ketiga">Ketiga</li>
+        <li id="keempat">Keempat</li>
+    </ul>
+
+    <script>
+        const menu1 = document.getElementById("menu");
+        const list1 = menu1.childNodes;
+
+        console.info(list1);
+
+        menu1.append(document.createElement("li"));
+        menu1.append(document.createElement("li"));
+        
+        console.info(list1);
+
+    </script>
+</body>
+</html>

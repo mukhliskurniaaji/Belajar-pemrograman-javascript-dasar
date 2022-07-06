@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Property</title>
+</head>
+<body>
+    <ul id="menu">
+        <li id="pertama">Pertama</li>
+        <li id="kedua">Kedua</li>
+        <li id="ketiga">Ketiga</li>
+        <li id="keempat">Keempat</li>
+    </ul>
+
+    <script>
+        const tampilmenu = document.getElementById("menu");
+        console.info(tampilmenu); // Node property
+        console.info(tampilmenu.children); // Node property
+
+        const tampilmenupertama = document.getElementById("pertama");
+        console.info(tampilmenupertama.textContent); // Node property
+        console.info(tampilmenupertama.nextSibling); // Node property
+
+        tampilmenu.removeChild(document.getElementById("ketiga"));
+        console.info(tampilmenu);
+
+    </script>
+</body>
+</html>

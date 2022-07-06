@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML TAble Element</title>
+</head>
+<body>
+    
+    <table id="orderRevanue" border="1">
+        <caption>Order Revanue</caption>
+        
+        <thead>
+            <tr>
+                <th>Month</th>
+                <th>Income</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>January</td>
+                <td>10000000</td>
+            </tr>
+            <tr>
+                <td>February</td>
+                <td>15000000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td>25000000</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script>
+        const orderRevanue = document.getElementById('orderRevanue');
+        console.log(orderRevanue.caption);
+        console.log(orderRevanue.tHead);
+        console.log(orderRevanue.tBodies);
+        console.log(orderRevanue.tFoot);
+    </script>
+</body>
+</html>

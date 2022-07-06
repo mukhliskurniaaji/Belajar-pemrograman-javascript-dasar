@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attr</title>
+</head>
+<body>
+    
+    <img id="logo" src="https://images.autofun.co.id/file1/b643c0da7ac440659d62094f7098832d_1072x604.jpg" alt="Type R">
+    
+    <script>
+        // Cara pertama memanggil attr
+        // const logo = document.getElementById("logo");
+        // const src = logo.getAttributeNode("src");
+
+        // console.info(`${src.name} : ${src.value}`);
+
+        // Cara kedua memanggil attr
+        const logo = document.getElementById("logo");
+        const src = logo.getAttribute("src");
+
+        console.info(src); // hasilnya adalah value dari src
+    </script>
+</body>
+</html>

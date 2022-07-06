@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML FOrm Element</title>
+</head>
+<body>
+    <form name="commentForm">
+        <label for="comment">
+            Comment : <input id="comment" type="text" name="comment"/>
+        </label>
+        <label for="from">
+            Comment : <input id="from" type="text" name="from"/>
+        </label>
+        <br>
+        <input type="submit" value="Submit"/>
+    </form>
+
+    <div id="commentList">
+
+    </div>
+
+    <script>
+        // document.querySelector("form[name=commentForm]").onsubmit = function (params) {
+            document.forms["commentForm"].onsubmit = function (params) {
+            event.preventDefault(); //Agar tidak disubmit
+
+            const commentList = document.getElementById("commentList");
+            // const comment = document.getElementById("comment").value;
+            // const from = document.getElementById("from").value;
+            const comment = document.forms["commentForm"]["comment"].value;
+            const from = document.forms["commentForm"]["from"].value;
+
+            const elementP = document.createElement("p");
+            elementP.innerHTML = `${comment} from ${from}`;
+            commentList.appendChild(elementP);
+
+            // Reset
+            // document.querySelector("form[name=commentForm]").reset()
+            document.forms["commentForm"].reset();
+        }
+    </script>
+</body>
+</html>

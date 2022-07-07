@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Param Ajax</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    
+    <form>
+        <label for="search"> Search :</label>
+        <input type="text" id="search" name="search">
+        <br><br>
+        <input type="button" id="searchid" value="Search">
+    </form>
+
+    <h1 id="response"></h1>
+
+    <script>
+        function doSearch() {            
+            const param = new URLSearchParams();
+            param.append('search', document.getElementById('search').value);
+            param.append('filter', document.getElementById('search').value);
+
+            const ajax = new XMLHttpRequest();
+            ajax.open('GET',`https://eoly1whppar4g4c.m.pipedream.net?${param.toString()}`); //sumber data
+            ajax.onload = function () {
+                const response = document.getElementById('response');
+                response.innerText = ajax.responseText;
+            }
+
+            ajax.send(); 
+        }
+        document.getElementById('searchid').onclick = doSearch;
+    </script>
+
+</body>
+</html>

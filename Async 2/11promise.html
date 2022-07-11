@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+
+    <table>
+        <tbody>
+            <tr>
+                <td>Pabrikan : </td>
+                <td id="pabrikan"></td>
+            </tr>
+            <tr>
+                <td>Tipe : </td>
+                <td id="type"></td>
+            </tr>
+            <tr>
+                <td>Nama : </td>
+                <td id="nama"></td>
+            </tr>
+            <tr>
+                <td>Harga : </td>
+                <td id="harga"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+     
+        // function getProduct() {
+        //     return new Promise(function (resolve, reject) {
+        //         // memanggil JSON :
+        //         const ajax = new XMLHttpRequest();
+        //         ajax.open('GET', "api/prodact.json");
+        //         ajax.onload = function () {
+        //             if (ajax.status === 200) {
+        //                 resolve(ajax.responseText);
+        //                 // resolve(`Berhasil : ${JSON.stringify(ajax.responseText)}`);
+        //             }else {
+        //                 reject(`Failed : ${ajax.responseText}`)
+        //             }
+        //         }
+        //         ajax.send();
+        //     });
+        // }
+        
+        const promise = new Promise(function (resolve, reject) {
+            // memanggil JSON :
+            const ajax = new XMLHttpRequest();
+            ajax.open('GET', "api/prodact.json");
+            ajax.onload = function () {
+                if (ajax.status === 200) {
+                    resolve(ajax.responseText);
+                }else {
+                    reject(ajax.responseText)
+                }
+            }
+            ajax.send();
+        })
+
+        // response telah didapatkan ketika sukses:
+            // getProduct()
+            .then(function(response) {
+                return JSON.parse(response);
+            })
+            .then(function(json) {
+                document.getElementById("pabrikan").textContent = json.pabrikan;
+                document.getElementById("type").textContent = json.type;
+                document.getElementById("nama").textContent = json.nama;
+                document.getElementById("harga").textContent = json.harga;
+            })
+
+            // ketika gagal :
+            .catch(function(json) {
+                document.getElementById("pabrikan").textContent = error;
+                document.getElementById("type").textContent = error;
+                document.getElementById("nama").textContent = error;
+                document.getElementById("harga").textContent = error;
+            })
+
+            .finally(function(json) {
+                console.info("Finally")
+            })
+        
+    </script>
+</body>
+</html>

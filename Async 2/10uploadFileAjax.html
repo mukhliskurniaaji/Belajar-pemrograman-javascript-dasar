@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload File dengan Ajax</title>
+</head>
+<body>
+    <h1>Registrasi</h1>
+    <form>
+        <label for="name">Name : </label>
+        <input type="text" id="name" name="name"><br>
+        <label for="username">Usrname : </label>
+        <input type="text" id="username" name="username"><br>
+        <label for="profile">Profile : </label>
+        <input type="file" id="profile" name="profile"><br>
+        <input type="button" id="register" value="Register";>
+    </form>
+
+    <script>
+        function doRegister() {
+            const ajax = new XMLHttpRequest();
+            ajax.open('POST', 'https://eoly1whppar4g4c.m.pipedream.net'); //dikirim ke
+            ajax.onload = function () {
+                console.log(ajax.responseText);
+            }
+            const form = new FormData(); //data yg dikirim
+            //menangkap inputan dari form :
+            const username = document.getElementById('username').value;
+            const name = document.getElementById('name').value;
+            const profile = document.getElementById('profile').files.item(0);
+
+            form.append('name', name);
+            form.append('username', username);
+            form.append('profile', profile);
+
+            ajax.send(form); //dikirim dalam bentuk form
+        }
+
+        document.getElementById("register").onclick = doRegister;
+    </script>
+</body>
+</html>

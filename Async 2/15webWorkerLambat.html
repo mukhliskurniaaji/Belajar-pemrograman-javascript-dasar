@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wer Worker Lambat</title>
+</head>
+<body>
+    <input type="button" id="button" value="Click Me">
+    <script>
+        function prosesLambat(total) {
+            for (let index = 0; index < total; index++) {
+                console.log(index);
+                
+            }
+        }
+        document.getElementById("button").onclick = function () {
+            console.info ('Mulai');
+            prosesLambat(50000);
+            console.info ('Selesai');
+
+        }
+    </script>
+</body>
+</html>

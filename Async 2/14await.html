@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Await Promise</title>
+</head>
+<body>
+    <script>
+        // Kembaliannya : Promise<json Product>
+        function getProduct(){
+            const response = fetch("api/prodact.json", {
+                method : "GET"
+            });
+            return response.then((response) => response.json());
+        }
+        getProduct()
+            .then((product)=>console.log(product));
+
+        // Memanggil kembaliannya <stringProductName>
+        function getProductName() {
+            return new Promise(function (resolve, reject) {
+                getProduct()
+                    .then((product)=>resolve(product.nama)) //bila berhasil
+                    .catch((error)=>reject("error")) //bila gagal
+            })
+        }
+        getProductName()
+            .then((productname)=>console.info(productname));
+
+        // CARA DENGAN AWAIT lebih simple:
+        // async function getProductNameAwait() {
+        //     const product = await getProduct() // menangkap data dari getProdust
+        //     return `${product.nama} ${product.pabrikan} ${product.type} ${product.harga}`
+        // }
+
+        // APABILA DENGAN TRY CATCH untuk menanggulangi error :
+         async function getProductNameAwait() {
+            try {
+                const product = await getProduct() // menangkap data dari getProdust
+                return `${product.nama} ${product.pabrikan} ${product.type} ${product.harga}`
+            } catch (error) {
+                return "error";
+            }   
+        }
+        getProductNameAwait()
+            .then((productname)=>console.info(productname));
+    </script>
+</body>
+</html>

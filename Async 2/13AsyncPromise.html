@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Promise</title>
+</head>
+<body>
+    <script>
+        // Promise Biasa :
+        function getNamePromise() {
+            return new Promise(function (resolve, reject) {
+                resolve("Bayu Mening Promise");
+            })
+        }
+        getNamePromise()
+            .then((nama) => console.log(nama));
+
+        // Promise dengan Async
+        async function getNameAsync () {
+            return "Banyu Bening Async";
+        }
+        getNameAsync()
+            .then((nama) => console.log(nama));
+
+        // Promise di Async
+        async function getNameAsyncPro () {
+            return new Promise(function (resolve, reject) {
+                resolve("Bayu Mening Promise dalam Async");
+            })
+        }
+        getNameAsyncPro()
+            .then((nama) => console.log(nama));
+    </script>
+</body>
+</html>

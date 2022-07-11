@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatch API</title>
+</head>
+<body>
+
+    <form>
+        <label for="username"> Username :</label>
+        <input type="text" id="username" name="username">
+        <br><br>
+        <label for="password"> Password :</label>
+        <input type="password" id="password" name="password">
+        <br><br>
+        <input type="button" id="login" value="Login">
+    </form>
+
+    <h1 id="response"></h1>
+
+    <script>
+
+        // function doLogin() {
+        //     const request = new Request("https://eoly1whppar4g4c.m.pipedream.net/",{
+        //         method : "POST",
+        //         headers : {
+        //             "Content-Type": "application/json",
+        //             "Accept" : "application/json"
+        //         },
+        //         body : JSON.stringify({
+        //             username : document.getElementById("username").value,
+        //             password : document.getElementById("password").value,
+        //         })
+        //     });
+        //     // sebenarnya berisi response :
+        //     const response = fetch(request);
+        // }
+        //atau:
+        function doLogin() {
+            const response = fetch("https://eoly1whppar4g4c.m.pipedream.net/",{
+                method : "POST",
+                headers : {
+                    "Content-Type": "application/json",
+                    "Accept" : "application/json"
+                },
+                body : JSON.stringify({
+                    username : document.getElementById("username").value,
+                    password : document.getElementById("password").value,
+                })
+            });
+
+            response
+                .then((response) =>response.json())
+                .then(function (json) {
+                    document.getElementById("response").textContent=json.about;
+                })
+        }
+        document.getElementById('login').onclick= doLogin;
+        
+    </script>
+</body>
+</html>

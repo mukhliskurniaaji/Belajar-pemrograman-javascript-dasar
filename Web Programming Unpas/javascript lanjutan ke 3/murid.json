@@ -1,0 +1,20 @@
+[
+    {
+        "nama" : "Banyu Bening",
+        "id" : "1",
+        "kelas" : 2,
+        "alamat": "Begajah"
+    },
+    {
+        "nama" : "Arif Barokah",
+        "id" : "2",
+        "kelas" : 2,
+        "alamat": "Mulur"
+    },
+    {
+        "nama" : "Heri Santoso",
+        "id" : "3",
+        "kelas" : 2,
+        "alamat": "Jagan"
+    }
+]
